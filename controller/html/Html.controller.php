@@ -67,19 +67,22 @@ class Html
         array_push($this->meta, $acum);
     }
 
-    public function loadScripts(array $urls){
-        foreach($urls as $url){
+    public function loadScripts(array $urls)
+    {
+        foreach ($urls as $url) {
             array_push($this->script, "<script src='$url'></script>");
         }
     }
-    
-    public function loadStyles(array $urls){
-        foreach($urls as $url){
+
+    public function loadStyles(array $urls)
+    {
+        foreach ($urls as $url) {
             array_push($this->style, "<link rel='stylesheet' href='$url' type='text/css'>");
         }
     }
 
-    public function loadHTML(string $html){
+    public function loadHTML(string $html)
+    {
         $this->content = $html;
     }
 
@@ -110,8 +113,8 @@ class Html
         return isset($this->title['text']) ? $this->title['text'] : '';
     }
 
-    public function getIconPage(string $atribute='href')
+    public function getIconPage(string $atribute = 'href')
     {
-        return $this->icon[$atribute];
+        return isset($this->icon[$atribute]) ? $this->icon[$atribute] : '';
     }
 }
