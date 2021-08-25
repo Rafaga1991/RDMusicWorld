@@ -1,0 +1,30 @@
+.volumeSound{
+    position: absolute;
+    transform: rotate(270deg);
+    width: 25%;
+    right: -20px;
+    top: -15px;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+    transition: .2s;
+}
+
+.cursor-pointer:hover{
+    transform: scale(1.1);
+}
+
+.btn-description{
+    color: white;
+    border-radius: 12px;
+    border: none;
+    font-size: 10px;
+}
+
+.music{
+    color: white;
+    padding: 10px;
+    border: 1px rgba(255, 255, 255, 0.247) solid;
+    border-radius: 10px;
+}

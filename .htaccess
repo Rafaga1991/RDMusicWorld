@@ -1,0 +1,8 @@
+RewriteEngine on
+RewriteCond %{HTTPS} !=on [NC]
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+Options All -Indexes
+
+ErrorDocument 403 https://%{SERVER_NAME}/?view=403
+ErrorDocument 404 https://%{SERVER_NAME}/?view=404
